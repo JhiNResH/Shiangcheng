@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { navLinks, companyInfo } from '../../data/content';
+import logoImg from '/unnamed.jpg';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,7 @@ export function Navbar() {
   return (
     <nav className={isScrolled ? 'scrolled' : ''}>
       <div className="logo">
-        <img src="/unnamed.jpg" alt="Logo" className="logo-icon" />
+        <img src={logoImg} alt="Logo" className="logo-icon" />
         {companyInfo.name}
       </div>
       
